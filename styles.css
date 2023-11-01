@@ -1,83 +1,68 @@
-/* Сброс стилей */
-body, div, h1, h2, h3, p, a, ul, li {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2f2f2f;
+    color: #f4a261;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    text-decoration: none;
-    line-height: 1.5;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    color: #e76f51;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
 }
 
-.header {
+.project {
+    width: 45%;
+    border: 1px solid #f4a261;
+    padding: 10px;
+    margin: 10px 0;
     text-align: center;
-    margin-bottom: 50px;
 }
 
-.header h1 {
-    font-size: 2.5em;
-    color: #333;
-}
-
-.subheader {
-    font-style: italic;
-    color: #555;
-}
-
-.divider {
-    border: 0;
-    border-top: 1px solid #e5e5e5;
-    margin: 40px 0;
-}
-
-.section {
-    margin-bottom: 40px;
-}
-
-.section-title {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #444;
-}
-
-.product {
-    margin-bottom: 40px;
-}
-
-.product-title {
-    font-size: 1.5em;
-    color: #007BFF;  /* Синий цвет для акцентирования */
-    margin-bottom: 20px;
-}
-
-.product-details {
-    list-style-type: none;
-}
-
-.product-details li {
+.project img {
+    max-width: 100%;
+    height: auto;
     margin-bottom: 10px;
 }
 
-.button {
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: #fff;
-    border-radius: 5px;
+footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    margin: 0 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #f4a261;
+    padding: 5px 10px;
+    border: 1px solid #f4a261;
     transition: background-color 0.3s;
 }
 
-.button:hover {
-    background-color: #0056b3;
-}
-
-.contact-list {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+footer a:hover {
+    background-color: #f4a261;
+    color: #2f2f2f;
 }
