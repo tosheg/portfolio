@@ -1,0 +1,52 @@
+/* Основной стиль для всего документа */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Заголовок портфолио */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Подзаголовки */
+h2 {
+    color: #666;
+    border-bottom: 2px solid #E07A5F; /* ярко-коралловый акцент */
+    padding-bottom: 10px;
+}
+
+/* Описание продукта/проекта */
+.product {
+    background-color: #fff;
+    margin: 20px 15%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Список характеристик продукта/проекта */
+.product ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.product li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #E07A5F; /* ярко-коралловый акцент */
+}
+
+/* Ссылки */
+a {
+    color: #58A4B0; /* ярко-бирюзовый акцент */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
