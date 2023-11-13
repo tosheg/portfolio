@@ -1,68 +1,59 @@
+/* style.css */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #2f2f2f;
-    color: #f4a261;
     margin: 0;
     padding: 0;
+    color: #333333; /* Dark text for readability */
+    background-color: #f0f0f0; /* Light background */
 }
 
 header {
-    background-color: #1a1a1a;
-    padding: 20px;
+    background-color: #005f73; /* Dark header background */
+    color: #ffffff; /* White text for header */
+    padding: 1em 0;
     text-align: center;
 }
 
-h1, h2, h3 {
+header h1 {
     margin: 0;
-    color: #e76f51;
 }
 
-.projects {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.project {
-    width: 45%;
-    border: 1px solid #f4a261;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: center;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #1a1a1a;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer ul {
-    list-style-type: none;
+nav ul {
+    list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
-footer li {
-    margin: 0 15px;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-footer a {
+nav ul li a {
     text-decoration: none;
-    color: #f4a261;
-    padding: 5px 10px;
-    border: 1px solid #f4a261;
-    transition: background-color 0.3s;
+    color: #94d2bd; /* Soft green for navigation links */
 }
 
-footer a:hover {
-    background-color: #f4a261;
-    color: #2f2f2f;
+#intro, #portfolio, #contact {
+    padding: 2em;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.project-gallery .project-item {
+    flex: 1 0 21%;
+    border: 1px solid #94d2bd; /* Border color matching the navigation links */
+    padding: 1em;
+    background-color: #e9d8a6; /* Light project card background */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .project-gallery .project-item {
+        flex: 1 0 46%;
+    }
 }
