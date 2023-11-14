@@ -113,13 +113,13 @@ nav ul li a:hover {
 
 /* Add background images for each parallax section */
 .parallax[data-parallax-speed="0.3"] {
-    background-image: url('your-parallax-image-1.jpg');
+    background-image: url('your-parallax-image-1.png');
 }
 
 .parallax[data-parallax-speed="0.5"] {
-    background-image: url('your-parallax-image-2.jpg');
+    background-image: url('your-parallax-image-2.png');
 }
 
 .parallax[data-parallax-speed="0.2"] {
-    background-image: url('your-parallax-image-3.jpg');
+    background-image: url('your-parallax-image-3.png');
 }
