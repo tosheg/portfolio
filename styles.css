@@ -15,11 +15,10 @@ body {
 }
 
 header {
-    background-color: var(--cyan); /* Changed color */
+    background-color: var(--cyan);
     color: white;
     padding: 1em 0;
     text-align: center;
-    position: relative;
 }
 
 nav ul {
