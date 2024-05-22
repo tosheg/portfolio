@@ -133,15 +133,15 @@ nav ul li a:hover {
     transition: transform 0.3s ease-out;
 }
 
-.parallax[data-parallax-speed="0.3"] {
+#parallax1 {
     background-image: url('your-parallax-image-1.png');
 }
 
-.parallax[data-parallax-speed="0.5"] {
+#parallax2 {
     background-image: url('your-parallax-image-2.png');
 }
 
-.parallax[data-parallax-speed="0.2"] {
+#parallax3 {
     background-image: url('your-parallax-image-3.png');
 }
 
