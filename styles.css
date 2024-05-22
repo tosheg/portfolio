@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #39ff14;
-    --secondary-color: #ff00e9;
-    --background-color: #100c08;
-    --text-color: #ffffff;
-    --accent-color: #00FFFF;
-    --button-background: #39ff14;
-    --button-color: #000000;
+    --primary-color: #CEB5FF; /* Digital Lavender */
+    --secondary-color: #0096FF; /* Tranquil Blue */
+    --accent-color: #E1A95F; /* Sundial */
+    --background-color: #100c08; /* Dark Background (or #282828) */
+    --text-color: #FFFFFF; /* White (or #F5F5F5) */
+    --button-background: #43B3AE; /* Verdigris */
+    --button-color: #000000; /* Black */
 }
 
 body {
