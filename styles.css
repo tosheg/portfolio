@@ -3,37 +3,53 @@
     --bright-pink: #ff00e9;
     --cyan: #00FFFF;
     --dark-bg: #100c08;
+    --light-bg: rgba(255, 255, 255, 0.1);
+    --text-color: white;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--text-color);
     background-color: var(--dark-bg);
     overflow-x: hidden;
 }
 
 header {
     background-color: var(--cyan);
-    color: white;
+    color: var(--text-color);
     padding: 1em 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     transition: color 0.3s ease;
 }
 
@@ -44,16 +60,23 @@ nav ul li a:hover {
 .section {
     padding: 3em 1em;
     text-align: center;
+    background: var(--dark-bg);
 }
 
 .neon-box {
     border: 1px solid var(--bright-pink);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--light-bg);
     backdrop-filter: blur(5px);
     border-radius: 10px;
     margin: 1em auto;
     max-width: 800px;
     padding: 2em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
 }
 
 .projects-grid {
@@ -69,7 +92,7 @@ nav ul li a:hover {
     padding: 1em;
     background: var(--dark-bg);
     border: 1px solid var(--neon-green);
-    color: white;
+    color: var(--text-color);
     border-radius: 8px;
     box-shadow: 0 0 10px var(--neon-green);
     transition: transform 0.3s ease;
@@ -110,7 +133,6 @@ nav ul li a:hover {
     transition: transform 0.3s ease-out;
 }
 
-/* Add background images for each parallax section */
 .parallax[data-parallax-speed="0.3"] {
     background-image: url('your-parallax-image-1.png');
 }
@@ -121,4 +143,17 @@ nav ul li a:hover {
 
 .parallax[data-parallax-speed="0.2"] {
     background-image: url('your-parallax-image-3.png');
+}
+
+footer {
+    background-color: var(--cyan);
+    color: var(--text-color);
+    padding: 1em 0;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
 }
