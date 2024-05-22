@@ -6,48 +6,64 @@
     <meta name="description" content="Sam Parker's Portfolio - Driven by innovation and user experience.">
     <title>Sam Parker's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Sam Parker</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Sam Parker</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section id="about" class="section neon-box">
-            <h2>About Me</h2>
-            <p>Driven by innovation and user experience, I bring a futuristic vision to product management.</p>
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Driven by innovation and user experience, I bring a futuristic vision to product management.</p>
+            </div>
         </section>
         <div class="parallax" data-parallax-speed="0.3"></div>
         <section id="projects" class="section">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project neon-box">
-                    <h3>Quantum Computing</h3>
-                    <p>Pushing the boundaries of processing power with quantum technologies.</p>
-                </div>
-                <div class="project neon-box">
-                    <h3>Blockchain Security</h3>
-                    <p>Enhancing data security with decentralized blockchain solutions.</p>
-                </div>
-                <div class="project neon-box">
-                    <h3>AI-Powered Analytics</h3>
-                    <p>Transforming data into insights with artificial intelligence.</p>
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project neon-box">
+                        <h3>Quantum Computing</h3>
+                        <p>Pushing the boundaries of processing power with quantum technologies.</p>
+                    </div>
+                    <div class="project neon-box">
+                        <h3>Blockchain Security</h3>
+                        <p>Enhancing data security with decentralized blockchain solutions.</p>
+                    </div>
+                    <div class="project neon-box">
+                        <h3>AI-Powered Analytics</h3>
+                        <p>Transforming data into insights with artificial intelligence.</p>
+                    </div>
                 </div>
             </div>
         </section>
         <div class="parallax" data-parallax-speed="0.5"></div>
         <section id="contact" class="section neon-box">
-            <h2>Get in Touch</h2>
-            <p>Interested in collaborating? Drop me a line at sam.parker@example.com</p>
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Interested in collaborating? Drop me a line at <a href="mailto:sam.parker@example.com">sam.parker@example.com</a></p>
+            </div>
         </section>
         <div class="parallax" data-parallax-speed="0.2"></div>
     </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sam Parker. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
