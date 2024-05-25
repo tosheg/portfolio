@@ -269,45 +269,56 @@ footer .container {
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
 }
 
-/* Smooth Acid Glitch Effect */
-@keyframes smooth-glitch {
+/* Acid Glitch Effect */
+@keyframes acid-glitch {
     0% {
-        transform: translate(0);
+        clip-path: inset(0% 0% 0% 0%);
+        transform: translate(0, 0);
     }
     10% {
-        transform: translate(-5px, -5px);
+        clip-path: inset(10% 0% 20% 0%);
+        transform: translate(-3px, 3px);
     }
     20% {
-        transform: translate(5px, 5px);
+        clip-path: inset(15% 0% 15% 0%);
+        transform: translate(3px, -3px);
     }
     30% {
-        transform: translate(-5px, 5px);
+        clip-path: inset(20% 0% 10% 0%);
+        transform: translate(-3px, -3px);
     }
     40% {
-        transform: translate(5px, -5px);
+        clip-path: inset(10% 0% 20% 0%);
+        transform: translate(3px, 3px);
     }
     50% {
-        transform: translate(-2px, -2px);
+        clip-path: inset(15% 0% 15% 0%);
+        transform: translate(-3px, 3px);
     }
     60% {
-        transform: translate(2px, 2px);
+        clip-path: inset(20% 0% 10% 0%);
+        transform: translate(3px, -3px);
     }
     70% {
-        transform: translate(-2px, 2px);
+        clip-path: inset(10% 0% 20% 0%);
+        transform: translate(-3px, -3px);
     }
     80% {
-        transform: translate(2px, -2px);
+        clip-path: inset(15% 0% 15% 0%);
+        transform: translate(3px, 3px);
     }
     90% {
-        transform: translate(0);
+        clip-path: inset(20% 0% 10% 0%);
+        transform: translate(-3px, 3px);
     }
     100% {
-        transform: translate(0);
+        clip-path: inset(0% 0% 0% 0%);
+        transform: translate(0, 0);
     }
 }
 
-.glitch-on-hover::before,
-.glitch-on-hover::after {
+.project:hover::before,
+.project:hover::after {
     content: '';
     position: absolute;
     top: 0;
@@ -321,18 +332,14 @@ footer .container {
     pointer-events: none;
 }
 
-.glitch-on-hover:hover::before,
-.glitch-on-hover:hover::after {
+.project:hover::before {
     opacity: 1;
-    animation: smooth-glitch 1s infinite; /* Slower animation */
+    animation: acid-glitch 1s infinite;
+    background: linear-gradient(90deg, rgba(255, 0, 255, 0.2), rgba(0, 255, 255, 0.2)); /* Acid colors */
 }
 
-.glitch-on-hover::before {
-    transform: translate(-5px, -5px);
-    background: linear-gradient(90deg, rgba(255, 0, 255, 0.2), rgba(0, 255, 255, 0.2)); /* Brighter colors */
-}
-
-.glitch-on-hover::after {
-    transform: translate(5px, 5px);
-    background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2)); /* Brighter colors */
+.project:hover::after {
+    opacity: 1;
+    animation: acid-glitch 1s infinite;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2)); /* Acid colors */
 }
