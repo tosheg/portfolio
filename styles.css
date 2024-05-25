@@ -153,12 +153,10 @@ nav ul li a:hover {
     border-radius: 0.5em;
     padding: 1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Ensure glitch effect doesn't overflow */
 }
 
 .project:hover {
     transform: none; /* Ensure no transform on hover */
-    box-shadow: none; /* Remove box shadow on hover */
 }
 
 .project img {
@@ -169,25 +167,23 @@ nav ul li a:hover {
 .project h3 {
     color: var(--button-background);
     margin-top: 0.5em;
-    transition: color 0.3s ease, background 0.3s ease; /* Adding transition for color change and background */
+    transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover h3 {
-    background: linear-gradient(135deg, var(--secondary-color), var(--hover-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--hover-color);
+    text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
 }
 
 .project p {
     font-size: 0.9em;
     line-height: 1.6;
-    transition: color 0.3s ease, background 0.3s ease; /* Adding transition for color change and background */
+    transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover p {
-    background: linear-gradient(135deg, var(--secondary-color), var(--hover-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--hover-color);
+    text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
 }
 
 .contact-section {
@@ -225,25 +221,23 @@ nav ul li a:hover {
 .gpt h3 {
     color: var(--button-background);
     margin-top: 0.5em;
-    transition: color 0.3s ease, background 0.3s ease; /* Adding transition for color change and background */
+    transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gpt:hover h3 {
-    background: linear-gradient(135deg, var(--secondary-color), var(--hover-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--hover-color);
+    text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
 }
 
 .gpt p {
     font-size: 0.9em;
     line-height: 1.6;
-    transition: color 0.3s ease, background 0.3s ease; /* Adding transition for color change and background */
+    transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gpt:hover p {
-    background: linear-gradient(135deg, var(--secondary-color), var(--hover-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--hover-color);
+    text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
 }
 
 footer {
@@ -269,52 +263,31 @@ footer .container {
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
 }
 
-/* Classic Glitch Effect */
+/* Classic Glitch Effect as Shadow */
 @keyframes glitch {
     0% {
-        transform: translate(0);
+        text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
     }
     20% {
-        transform: translate(-2px, -2px);
+        text-shadow: 2px -2px 0 rgba(255, 0, 0, 0.6), -2px 2px 0 rgba(0, 255, 0, 0.6), -2px -2px 0 rgba(0, 0, 255, 0.6);
     }
     40% {
-        transform: translate(2px, 2px);
+        text-shadow: -2px 2px 0 rgba(255, 0, 0, 0.6), 2px -2px 0 rgba(0, 255, 0, 0.6), 2px 2px 0 rgba(0, 0, 255, 0.6);
     }
     60% {
-        transform: translate(-2px, 2px);
+        text-shadow: 2px 2px 0 rgba(255, 0, 0, 0.6), -2px -2px 0 rgba(0, 255, 0, 0.6), -2px 2px 0 rgba(0, 0, 255, 0.6);
     }
     80% {
-        transform: translate(2px, -2px);
+        text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
     }
     100% {
-        transform: translate(0);
+        text-shadow: 2px -2px 0 rgba(255, 0, 0, 0.6), -2px 2px 0 rgba(0, 255, 0, 0.6), -2px -2px 0 rgba(0, 0, 255, 0.6);
     }
 }
 
-.project:hover::before,
-.project:hover::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    opacity: 0;
-    transition: opacity 0.2s ease; /* Make the transition smoother */
-    pointer-events: none;
-}
-
-.project:hover::before {
-    opacity: 0.6;
-    animation: glitch 1s infinite;
-    clip-path: inset(0 0 50% 0);
-    background: linear-gradient(90deg, rgba(255, 0, 0, 0.6), rgba(0, 255, 0, 0.6), rgba(0, 0, 255, 0.6)); /* RGB separation */
-}
-
-.project:hover::after {
-    opacity: 0.6;
-    animation: glitch 1s infinite;
-    clip-path: inset(50% 0 0 0);
-    background: linear-gradient(90deg, rgba(0, 255, 0, 0.6), rgba(0, 0, 255, 0.6), rgba(255, 0, 0, 0.6)); /* RGB separation */
+.project:hover h3,
+.project:hover p,
+.gpt:hover h3,
+.gpt:hover p {
+    animation: glitch 0.3s infinite;
 }
