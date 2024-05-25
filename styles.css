@@ -155,8 +155,8 @@ nav ul li a:hover {
 }
 
 .project:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 2px 10px rgba(0, 191, 165, 0.5); /* Petite green shadow */
+    transform: none; /* Ensure no transform on hover */
+    box-shadow: none; /* Remove box shadow on hover */
 }
 
 .project img {
@@ -167,11 +167,23 @@ nav ul li a:hover {
 .project h3 {
     color: var(--button-background);
     margin-top: 0.5em;
+    transition: color 0.3s ease; /* Adding transition for color change */
+}
+
+.project:hover h3 {
+    background: linear-gradient(135deg, var(--secondary-color), var(--hover-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .project p {
     font-size: 0.9em;
     line-height: 1.6;
+    transition: color 0.3s ease; /* Adding transition for color change */
+}
+
+.project:hover p {
+    color: var(--hover-color);
 }
 
 .contact-section {
@@ -209,11 +221,23 @@ nav ul li a:hover {
 .gpt h3 {
     color: var(--button-background);
     margin-top: 0.5em;
+    transition: color 0.3s ease; /* Adding transition for color change */
+}
+
+.gpt:hover h3 {
+    background: linear-gradient(135deg, var(--secondary-color), var(--hover-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .gpt p {
     font-size: 0.9em;
     line-height: 1.6;
+    transition: color 0.3s ease; /* Adding transition for color change */
+}
+
+.gpt:hover p {
+    color: var(--hover-color);
 }
 
 footer {
@@ -330,7 +354,5 @@ footer .container {
 .glitch-on-hover:hover {
     position: relative;
     display: inline-block;
-    color: var(--primary-color);
-    font-size: 2em;
     animation: glitch 0.5s infinite;
 }
