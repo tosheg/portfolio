@@ -3,7 +3,7 @@
     --secondary-color: #0096FF; /* Tranquil Blue */
     --accent-color: #E1A95F; /* Sundial */
     --background-color: #100c08; /* Dark Background (or #282828) */
-    --text-color: #FFFFFF; /* White (or #F5F5F5) */
+    --text-color: #000000; /* Black for text */
     --button-background: #43B3AE; /* Verdigris */
     --button-color: #000000; /* Black */
     --acid-shadow: #A7F432; /* Acid Green */
@@ -62,12 +62,11 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     text-align: center;
-    background-image: url('hero-background.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: var(--background-color);
     color: var(--text-color);
+    padding: 2em 1em;
 }
 
 .hero-section .container {
@@ -75,7 +74,7 @@ nav ul li a:hover {
 }
 
 .hero-section h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
 }
 
@@ -132,11 +131,6 @@ nav ul li a:hover {
     box-shadow: 0 4px 20px var(--acid-shadow);
 }
 
-.project img {
-    width: 100%;
-    border-radius: 0.5em;
-}
-
 .project h3 {
     color: var(--primary-color);
     margin-top: 0.5em;
@@ -158,3 +152,41 @@ nav ul li a:hover {
 
 .gpts-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+}
+
+.gpt {
+    background-color: #282828;
+    border-radius: 0.5em;
+    padding: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gpt:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px var(--acid-shadow);
+}
+
+.gpt h3 {
+    color: var(--primary-color);
+    margin-top: 0.5em;
+}
+
+.gpt p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 1em 0;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
