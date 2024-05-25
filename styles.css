@@ -66,7 +66,7 @@ nav ul li a:hover {
     align-items: center;
     height: 80vh;
     text-align: center;
-    background: url('background-image.jpg') no-repeat center center/cover;
+    background: url('images/hero-image.jpg') no-repeat center center/cover;
     color: var(--text-color);
     padding: 2em 1em;
 }
@@ -84,6 +84,20 @@ nav ul li a:hover {
 .hero-section p {
     font-size: 1.2em;
     margin-bottom: 1em;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 600px;
+    margin: 1em auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-proof {
+    margin: 1em 0;
+    font-weight: bold;
+    color: var(--green-color);
 }
 
 .btn {
