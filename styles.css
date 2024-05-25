@@ -6,6 +6,7 @@
     --text-color: #FFFFFF; /* White (or #F5F5F5) */
     --button-background: #43B3AE; /* Verdigris */
     --button-color: #000000; /* Black */
+    --acid-shadow: #A7F432; /* Acid Green */
 }
 
 body {
@@ -92,11 +93,12 @@ nav ul li a:hover {
     border-radius: 0.25em;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
     background-color: var(--secondary-color);
+    box-shadow: 0 4px 15px var(--acid-shadow);
 }
 
 .section {
@@ -127,7 +129,7 @@ nav ul li a:hover {
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px var(--acid-shadow);
 }
 
 .project img {
@@ -135,19 +137,24 @@ nav ul li a:hover {
     border-radius: 0.5em;
 }
 
+.project h3 {
+    color: var(--primary-color);
+    margin-top: 0.5em;
+}
+
+.project p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
 .contact-section {
     background-color: var(--background-color);
 }
 
-footer {
-    background-color: var(--accent-color);
+.gpts-section {
+    background-color: var(--background-color);
     color: var(--text-color);
-    padding: 1em 0;
-    text-align: center;
 }
 
-footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1em;
-}
+.gpts-grid {
+    display: grid;
