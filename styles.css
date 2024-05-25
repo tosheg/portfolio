@@ -102,10 +102,13 @@ nav ul li a:hover {
     border-radius: 50%; /* Making it circular */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease; /* Adding transition for hover effect */
+    position: relative; /* Needed for glitch effect */
+    overflow: hidden;
 }
 
 .hero-image:hover {
     transform: rotate(360deg); /* Adding a funny animation on hover */
+    animation: glitch 0.5s infinite; /* Adding glitch effect */
 }
 
 .social-proof {
@@ -132,26 +135,7 @@ nav ul li a:hover {
 .btn:hover {
     background-color: var(--hover-color);
     box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5); /* Petite shadow */
-}
-
-.btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
-    filter: hue-rotate(90deg);
-    clip-path: polygon(0% 100%, 0% 80%, 10% 70%, 90% 70%, 100% 80%, 100% 100%);
-    transition: all 0.2s ease;
-    opacity: 0;
-}
-
-.btn:hover::after {
-    opacity: 1;
-    transform: translateY(-10px);
+    animation: glitch 0.5s infinite; /* Adding glitch effect */
 }
 
 .section {
@@ -181,26 +165,7 @@ nav ul li a:hover {
 .project:hover {
     transform: translateY(-3px);
     box-shadow: 0 2px 10px rgba(0, 191, 165, 0.5); /* Petite green shadow */
-}
-
-.project::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
-    filter: hue-rotate(90deg);
-    clip-path: polygon(0% 100%, 0% 80%, 10% 70%, 90% 70%, 100% 80%, 100% 100%);
-    transition: all 0.2s ease;
-    opacity: 0;
-}
-
-.project:hover::after {
-    opacity: 1;
-    transform: translateY(-10px);
+    animation: glitch 0.5s infinite; /* Adding glitch effect */
 }
 
 .project img {
@@ -245,26 +210,7 @@ nav ul li a:hover {
 .gpt:hover {
     transform: translateY(-3px);
     box-shadow: 0 2px 10px rgba(0, 191, 165, 0.5); /* Petite green shadow */
-}
-
-.gpt::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
-    filter: hue-rotate(90deg);
-    clip-path: polygon(0% 100%, 0% 80%, 10% 70%, 90% 70%, 100% 80%, 100% 100%);
-    transition: all 0.2s ease;
-    opacity: 0;
-}
-
-.gpt:hover::after {
-    opacity: 1;
-    transform: translateY(-10px);
+    animation: glitch 0.5s infinite; /* Adding glitch effect */
 }
 
 .gpt img {
