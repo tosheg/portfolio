@@ -64,7 +64,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 50vh; /* Adjusted height to fit content */
     text-align: center;
     background: url('images/hero-image.jpg') no-repeat center center/cover;
     color: var(--text-color);
@@ -76,7 +76,7 @@ nav ul li a:hover {
 }
 
 .hero-section h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
     color: var(--primary-color);
 }
@@ -88,7 +88,7 @@ nav ul li a:hover {
 
 .hero-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
     margin: 1em auto;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -119,12 +119,8 @@ nav ul li a:hover {
 }
 
 .section {
-    padding: 3em 1em;
+    padding: 2em 1em; /* Adjusted padding to fit content */
     text-align: center;
-}
-
-.about-section {
-    background-color: var(--accent-color);
 }
 
 .projects-section {
@@ -133,7 +129,7 @@ nav ul li a:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
 }
 
@@ -175,7 +171,7 @@ nav ul li a:hover {
 
 .gpts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
 }
 
