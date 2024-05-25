@@ -65,25 +65,40 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     height: 50vh; /* Adjusted height to fit content */
-    text-align: center;
+    text-align: left;
     background: url('images/hero-image.jpg') no-repeat center center/cover;
     color: var(--text-color);
     padding: 2em 1em;
 }
 
-.hero-section .container {
-    max-width: 800px;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.hero-section h2 {
+.hero-text {
+    flex: 1;
+    padding-right: 2em;
+}
+
+.hero-text h2 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
     color: var(--primary-color);
 }
 
-.hero-section p {
+.hero-text p {
     font-size: 1.2em;
     margin-bottom: 1em;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-image {
