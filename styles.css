@@ -238,3 +238,99 @@ footer .container {
     color: var(--button-color);
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
 }
+
+/* Glitch Effect */
+@keyframes glitch {
+    0% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.02deg);
+    }
+    5% {
+        clip: rect(85px, 9999px, 18px, 0);
+        transform: skew(0.04deg);
+    }
+    10% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.02deg);
+    }
+    15% {
+        clip: rect(38px, 9999px, 42px, 0);
+        transform: skew(0.06deg);
+    }
+    20% {
+        clip: rect(58px, 9999px, 24px, 0);
+        transform: skew(0.08deg);
+    }
+    25% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.1deg);
+    }
+    30% {
+        clip: rect(45px, 9999px, 22px, 0);
+        transform: skew(0.12deg);
+    }
+    35% {
+        clip: rect(58px, 9999px, 42px, 0);
+        transform: skew(0.14deg);
+    }
+    40% {
+        clip: rect(45px, 9999px, 22px, 0);
+        transform: skew(0.16deg);
+    }
+    45% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.18deg);
+    }
+    50% {
+        clip: rect(85px, 9999px, 18px, 0);
+        transform: skew(0.2deg);
+    }
+    55% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.22deg);
+    }
+    60% {
+        clip: rect(38px, 9999px, 42px, 0);
+        transform: skew(0.24deg);
+    }
+    65% {
+        clip: rect(58px, 9999px, 24px, 0);
+        transform: skew(0.26deg);
+    }
+    70% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.28deg);
+    }
+    75% {
+        clip: rect(45px, 9999px, 22px, 0);
+        transform: skew(0.3deg);
+    }
+    80% {
+        clip: rect(58px, 9999px, 42px, 0);
+        transform: skew(0.32deg);
+    }
+    85% {
+        clip: rect(45px, 9999px, 22px, 0);
+        transform: skew(0.34deg);
+    }
+    90% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.36deg);
+    }
+    95% {
+        clip: rect(85px, 9999px, 18px, 0);
+        transform: skew(0.38deg);
+    }
+    100% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.4deg);
+    }
+}
+
+.glitch-on-hover:hover {
+    position: relative;
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 2em;
+    animation: glitch 0.5s infinite;
+}
