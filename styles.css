@@ -111,7 +111,7 @@ nav ul li a:hover {
 .social-proof {
     margin: 1em 0;
     font-weight: bold;
-    color: var(--green-color);
+    color: var (--green-color);
 }
 
 .btn {
@@ -167,7 +167,7 @@ nav ul li a:hover {
 .project h3 {
     color: var(--button-background);
     margin-top: 0.5em;
-    transition: color 0.3s ease; /* Adding transition for color change */
+    transition: color 0.3s ease, background 0.3s ease; /* Adding transition for color change and background */
 }
 
 .project:hover h3 {
@@ -179,11 +179,13 @@ nav ul li a:hover {
 .project p {
     font-size: 0.9em;
     line-height: 1.6;
-    transition: color 0.3s ease; /* Adding transition for color change */
+    transition: color 0.3s ease, background 0.3s ease; /* Adding transition for color change and background */
 }
 
 .project:hover p {
-    color: var(--hover-color);
+    background: linear-gradient(135deg, var(--secondary-color), var(--hover-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact-section {
@@ -221,7 +223,7 @@ nav ul li a:hover {
 .gpt h3 {
     color: var(--button-background);
     margin-top: 0.5em;
-    transition: color 0.3s ease; /* Adding transition for color change */
+    transition: color 0.3s ease, background 0.3s ease; /* Adding transition for color change and background */
 }
 
 .gpt:hover h3 {
@@ -233,11 +235,13 @@ nav ul li a:hover {
 .gpt p {
     font-size: 0.9em;
     line-height: 1.6;
-    transition: color 0.3s ease; /* Adding transition for color change */
+    transition: color 0.3s ease, background 0.3s ease; /* Adding transition for color change and background */
 }
 
 .gpt:hover p {
-    color: var(--hover-color);
+    background: linear-gradient(135deg, var(--secondary-color), var(--hover-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 footer {
