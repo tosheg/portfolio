@@ -167,7 +167,7 @@ nav ul li a:hover {
 .project h3 {
     color: var(--button-background);
     margin-top: 0.5em;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .project:hover h3 {
@@ -178,12 +178,40 @@ nav ul li a:hover {
 .project p {
     font-size: 0.9em;
     line-height: 1.6;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .project:hover p {
     color: var(--hover-color);
     text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
+}
+
+.project::before,
+.project::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+}
+
+.project:hover::before,
+.project:hover::after {
+    opacity: 1;
+}
+
+.project::before {
+    transform: translate(-3px, -3px);
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.project::after {
+    transform: translate(3px, 3px);
+    background: rgba(0, 255, 0, 0.2);
 }
 
 .contact-section {
@@ -221,7 +249,7 @@ nav ul li a:hover {
 .gpt h3 {
     color: var(--button-background);
     margin-top: 0.5em;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .gpt:hover h3 {
@@ -232,12 +260,40 @@ nav ul li a:hover {
 .gpt p {
     font-size: 0.9em;
     line-height: 1.6;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .gpt:hover p {
     color: var(--hover-color);
     text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
+}
+
+.gpt::before,
+.gpt::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+}
+
+.gpt:hover::before,
+.gpt:hover::after {
+    opacity: 1;
+}
+
+.gpt::before {
+    transform: translate(-3px, -3px);
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.gpt::after {
+    transform: translate(3px, 3px);
+    background: rgba(0, 255, 0, 0.2);
 }
 
 footer {
@@ -266,28 +322,38 @@ footer .container {
 /* Classic Glitch Effect as Shadow */
 @keyframes glitch {
     0% {
-        text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
+        transform: translate(0);
+        box-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
     }
     20% {
-        text-shadow: 2px -2px 0 rgba(255, 0, 0, 0.6), -2px 2px 0 rgba(0, 255, 0, 0.6), -2px -2px 0 rgba(0, 0, 255, 0.6);
+        transform: translate(2px, -2px);
+        box-shadow: 2px -2px 0 rgba(255, 0, 0, 0.6), -2px 2px 0 rgba(0, 255, 0, 0.6), -2px -2px 0 rgba(0, 0, 255, 0.6);
     }
     40% {
-        text-shadow: -2px 2px 0 rgba(255, 0, 0, 0.6), 2px -2px 0 rgba(0, 255, 0, 0.6), 2px 2px 0 rgba(0, 0, 255, 0.6);
+        transform: translate(-2px, 2px);
+        box-shadow: -2px 2px 0 rgba(255, 0, 0, 0.6), 2px -2px 0 rgba(0, 255, 0, 0.6), 2px 2px 0 rgba(0, 0, 255, 0.6);
     }
     60% {
-        text-shadow: 2px 2px 0 rgba(255, 0, 0, 0.6), -2px -2px 0 rgba(0, 255, 0, 0.6), -2px 2px 0 rgba(0, 0, 255, 0.6);
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 rgba(255, 0, 0, 0.6), -2px -2px 0 rgba(0, 255, 0, 0.6), -2px 2px 0 rgba(0, 0, 255, 0.6);
     }
     80% {
-        text-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
+        transform: translate(-2px, -2px);
+        box-shadow: -2px -2px 0 rgba(255, 0, 0, 0.6), 2px 2px 0 rgba(0, 255, 0, 0.6), 2px -2px 0 rgba(0, 0, 255, 0.6);
     }
     100% {
-        text-shadow: 2px -2px 0 rgba(255, 0, 0, 0.6), -2px 2px 0 rgba(0, 255, 0, 0.6), -2px -2px 0 rgba(0, 0, 255, 0.6);
+        transform: translate(0);
+        box-shadow: 2px -2px 0 rgba(255, 0, 0, 0.6), -2px 2px 0 rgba(0, 255, 0, 0.6), -2px -2px 0 rgba(0, 0, 255, 0.6);
     }
 }
 
 .project:hover h3,
 .project:hover p,
+.project:hover::before,
+.project:hover::after,
 .gpt:hover h3,
-.gpt:hover p {
-    animation: glitch 0.3s infinite;
+.gpt:hover p,
+.gpt:hover::before,
+.gpt:hover::after {
+    animation: glitch 1s infinite;
 }
