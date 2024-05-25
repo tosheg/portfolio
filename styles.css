@@ -269,51 +269,25 @@ footer .container {
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
 }
 
-/* Acid Glitch Effect */
-@keyframes acid-glitch {
+/* Classic Glitch Effect */
+@keyframes glitch {
     0% {
-        clip-path: inset(0% 0% 0% 0%);
-        transform: translate(0, 0);
-    }
-    10% {
-        clip-path: inset(10% 0% 20% 0%);
-        transform: translate(-3px, 3px);
+        transform: translate(0);
     }
     20% {
-        clip-path: inset(15% 0% 15% 0%);
-        transform: translate(3px, -3px);
-    }
-    30% {
-        clip-path: inset(20% 0% 10% 0%);
-        transform: translate(-3px, -3px);
+        transform: translate(-2px, -2px);
     }
     40% {
-        clip-path: inset(10% 0% 20% 0%);
-        transform: translate(3px, 3px);
-    }
-    50% {
-        clip-path: inset(15% 0% 15% 0%);
-        transform: translate(-3px, 3px);
+        transform: translate(2px, 2px);
     }
     60% {
-        clip-path: inset(20% 0% 10% 0%);
-        transform: translate(3px, -3px);
-    }
-    70% {
-        clip-path: inset(10% 0% 20% 0%);
-        transform: translate(-3px, -3px);
+        transform: translate(-2px, 2px);
     }
     80% {
-        clip-path: inset(15% 0% 15% 0%);
-        transform: translate(3px, 3px);
-    }
-    90% {
-        clip-path: inset(20% 0% 10% 0%);
-        transform: translate(-3px, 3px);
+        transform: translate(2px, -2px);
     }
     100% {
-        clip-path: inset(0% 0% 0% 0%);
-        transform: translate(0, 0);
+        transform: translate(0);
     }
 }
 
@@ -326,20 +300,21 @@ footer .container {
     width: 100%;
     height: 100%;
     background: inherit;
-    mix-blend-mode: multiply;
     opacity: 0;
-    transition: opacity 0.5s ease; /* Make the transition smoother */
+    transition: opacity 0.2s ease; /* Make the transition smoother */
     pointer-events: none;
 }
 
 .project:hover::before {
-    opacity: 1;
-    animation: acid-glitch 1s infinite;
-    background: linear-gradient(90deg, rgba(255, 0, 255, 0.2), rgba(0, 255, 255, 0.2)); /* Acid colors */
+    opacity: 0.6;
+    animation: glitch 1s infinite;
+    clip-path: inset(0 0 50% 0);
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.6), rgba(0, 255, 0, 0.6), rgba(0, 0, 255, 0.6)); /* RGB separation */
 }
 
 .project:hover::after {
-    opacity: 1;
-    animation: acid-glitch 1s infinite;
-    background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2)); /* Acid colors */
+    opacity: 0.6;
+    animation: glitch 1s infinite;
+    clip-path: inset(50% 0 0 0);
+    background: linear-gradient(90deg, rgba(0, 255, 0, 0.6), rgba(0, 0, 255, 0.6), rgba(255, 0, 0, 0.6)); /* RGB separation */
 }
