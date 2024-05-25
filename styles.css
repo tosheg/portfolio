@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #A0E1E0; /* Light Blue */
+    --primary-color: #5A20CB; /* Deep Purple */
     --secondary-color: #ff4081; /* Vibrant Pink */
     --background-color: #ffffff; /* White */
     --text-color: #333333; /* Dark Gray */
     --accent-color: #f5f5f5; /* Light Gray */
-    --button-background: #A0E1E0; /* Light Blue */
+    --button-background: #5A20CB; /* Deep Purple */
     --button-color: #ffffff; /* White */
     --hover-color: #ff4081; /* Vibrant Pink */
     --green-color: #00BFA5; /* LinkedIn Green */
@@ -66,7 +66,7 @@ nav ul li a:hover {
     align-items: center;
     height: 50vh; /* Adjusted height to fit content */
     text-align: left;
-    background: url('images/hero-image.jpg') no-repeat center center/cover;
+    background-color: var(--background-color);
     color: var(--text-color);
     padding: 2em 1em;
 }
@@ -95,13 +95,8 @@ nav ul li a:hover {
     margin-bottom: 1em;
 }
 
-.hero-image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
 .hero-image {
+    flex: 1;
     width: 100%;
     max-width: 300px;
     margin: 1em auto;
