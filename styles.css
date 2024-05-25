@@ -1,11 +1,10 @@
 :root {
-    --primary-color: #5A20CB; /* Deep Purple */
-    --secondary-color: #ff4081; /* Vibrant Pink */
-    --background-color: #ffffff; /* White */
+    --primary-background-color: #E0F4E4; /* Light Mint Green */
+    --secondary-background-color: #FFFFFF; /* White */
     --text-color: #333333; /* Dark Gray */
-    --accent-color: #f5f5f5; /* Light Gray */
-    --button-background: #5A20CB; /* Deep Purple */
-    --button-color: #ffffff; /* White */
+    --accent-color: #A3D1A1; /* LinkedIn Green */
+    --button-background-color: #8DD9B6; /* Light Green */
+    --button-text-color: #333333; /* Dark Gray */
 }
 
 body {
@@ -13,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--primary-background-color);
     overflow-x: hidden;
 }
 
@@ -54,7 +53,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--button-background-color);
 }
 
 .hero-section {
@@ -85,8 +84,8 @@ nav ul li a:hover {
 .btn {
     display: inline-block;
     padding: 0.75em 1.5em;
-    background-color: var(--button-background);
-    color: var(--button-color);
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
     border: none;
     border-radius: 0.25em;
     font-size: 1em;
@@ -95,7 +94,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -105,11 +104,11 @@ nav ul li a:hover {
 }
 
 .about-section {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-background-color);
 }
 
 .projects-section {
-    background-color: var(--background-color);
+    background-color: var(--primary-background-color);
 }
 
 .projects-grid {
@@ -119,7 +118,7 @@ nav ul li a:hover {
 }
 
 .project {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-background-color);
     border-radius: 0.5em;
     padding: 1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -136,7 +135,7 @@ nav ul li a:hover {
 }
 
 .project h3 {
-    color: var(--primary-color);
+    color: var(--button-background-color);
     margin-top: 0.5em;
 }
 
@@ -146,11 +145,11 @@ nav ul li a:hover {
 }
 
 .contact-section {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-background-color);
 }
 
 .gpts-section {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-background-color);
     color: var(--text-color);
 }
 
@@ -161,7 +160,7 @@ nav ul li a:hover {
 }
 
 .gpt {
-    background-color: var(--background-color);
+    background-color: var(--primary-background-color);
     border-radius: 0.5em;
     padding: 1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -178,7 +177,7 @@ nav ul li a:hover {
 }
 
 .gpt h3 {
-    color: var(--primary-color);
+    color: var(--button-background-color);
     margin-top: 0.5em;
 }
 
