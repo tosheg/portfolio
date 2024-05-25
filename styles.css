@@ -2,8 +2,8 @@
     --primary-color: #CEB5FF; /* Digital Lavender */
     --secondary-color: #0096FF; /* Tranquil Blue */
     --accent-color: #E1A95F; /* Sundial */
-    --background-color: #100c08; /* Dark Background (or #282828) */
-    --text-color: #000000; /* Black for text */
+    --background-color: #100c08; /* Dark Background */
+    --text-color: #FFFFFF; /* White for text */
     --button-background: #43B3AE; /* Verdigris */
     --button-color: #000000; /* Black */
     --acid-shadow: #A7F432; /* Acid Green */
@@ -64,7 +64,7 @@ nav ul li a:hover {
     align-items: center;
     height: 80vh;
     text-align: center;
-    background-color: var(--background-color);
+    background: url('background-image.jpg') no-repeat center center/cover;
     color: var(--text-color);
     padding: 2em 1em;
 }
@@ -74,7 +74,7 @@ nav ul li a:hover {
 }
 
 .hero-section h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 0.5em;
 }
 
