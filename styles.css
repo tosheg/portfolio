@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #5A20CB; /* Deep Purple */
+    --primary-color: #A0E1E0; /* Light Blue */
     --secondary-color: #ff4081; /* Vibrant Pink */
     --background-color: #ffffff; /* White */
     --text-color: #333333; /* Dark Gray */
     --accent-color: #f5f5f5; /* Light Gray */
-    --button-background: #5A20CB; /* Deep Purple */
+    --button-background: #A0E1E0; /* Light Blue */
     --button-color: #ffffff; /* White */
     --hover-color: #ff4081; /* Vibrant Pink */
     --green-color: #00BFA5; /* LinkedIn Green */
