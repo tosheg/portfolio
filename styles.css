@@ -57,7 +57,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--hover-color);
-    box-shadow: 0 2px 10px var(--hover-color);
+    box-shadow: 0 1px 5px rgba(255, 64, 129, 0.5); /* Petite shadow */
 }
 
 .hero-section {
@@ -96,12 +96,12 @@ nav ul li a:hover {
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
     background-color: var(--hover-color);
-    box-shadow: 0 4px 15px var(--hover-color);
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5); /* Petite shadow */
 }
 
 .section {
@@ -131,8 +131,8 @@ nav ul li a:hover {
 }
 
 .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 10px rgba(0, 191, 165, 0.5); /* Petite green shadow */
 }
 
 .project img {
@@ -173,8 +173,8 @@ nav ul li a:hover {
 }
 
 .gpt:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px var(--hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 2px 10px rgba(0, 191, 165, 0.5); /* Petite green shadow */
 }
 
 .gpt img {
