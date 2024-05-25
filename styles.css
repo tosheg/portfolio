@@ -114,7 +114,7 @@ nav ul li a:hover {
 .social-proof {
     margin: 1em 0;
     font-weight: bold;
-    color: var(--green-color);
+    color: var (--green-color);
 }
 
 .btn {
@@ -161,7 +161,7 @@ nav ul li a:hover {
 
 .project:hover {
     transform: none; /* Ensure no transform on hover */
-    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5); /* Petite shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Reset shadow */
 }
 
 .project img {
@@ -184,7 +184,12 @@ nav ul li a:hover {
 .project:hover h3,
 .project:hover p {
     color: var(--hover-color);
-    animation: glitch-snapshot 0.3s;
+    animation: glitch 0.5s infinite alternate;
+    text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+}
+
+.project:hover {
+    box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
 }
 
 .contact-section {
@@ -235,7 +240,12 @@ nav ul li a:hover {
 .gpt:hover h3,
 .gpt:hover p {
     color: var(--hover-color);
-    animation: glitch-snapshot 0.3s;
+    animation: glitch 0.5s infinite alternate;
+    text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+}
+
+.gpt:hover {
+    box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
 }
 
 footer {
@@ -261,14 +271,18 @@ footer .container {
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
 }
 
-/* Snapshot Glitch Effect */
-@keyframes glitch-snapshot {
+/* Glitch Effect as Shadow */
+@keyframes glitch {
     0% {
         text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
         box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
     }
+    50% {
+        text-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-mint), -2px -2px 0 var(--soft-acid-yellow);
+        box-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-mint), -2px -2px 0 var(--soft-acid-yellow);
+    }
     100% {
-        text-shadow: none;
-        box-shadow: none;
+        text-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
+        box-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
     }
 }
