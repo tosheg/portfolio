@@ -111,7 +111,7 @@ nav ul li a:hover {
 .social-proof {
     margin: 1em 0;
     font-weight: bold;
-    color: var (--green-color);
+    color: var(--green-color);
 }
 
 .btn {
@@ -148,10 +148,12 @@ nav ul li a:hover {
 }
 
 .project {
+    position: relative; /* Add relative positioning */
     background-color: var(--accent-color);
     border-radius: 0.5em;
     padding: 1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure glitch effect doesn't overflow */
 }
 
 .project:hover {
@@ -270,93 +272,52 @@ footer .container {
 /* Glitch Effect */
 @keyframes glitch {
     0% {
-        clip: rect(42px, 9999px, 44px, 0);
-        transform: skew(0.02deg);
-    }
-    5% {
-        clip: rect(85px, 9999px, 18px, 0);
-        transform: skew(0.04deg);
-    }
-    10% {
-        clip: rect(42px, 9999px, 44px, 0);
-        transform: skew(0.02deg);
-    }
-    15% {
-        clip: rect(38px, 9999px, 42px, 0);
-        transform: skew(0.06deg);
+        transform: translate(0);
     }
     20% {
-        clip: rect(58px, 9999px, 24px, 0);
-        transform: skew(0.08deg);
-    }
-    25% {
-        clip: rect(42px, 9999px, 44px, 0);
-        transform: skew(0.1deg);
-    }
-    30% {
-        clip: rect(45px, 9999px, 22px, 0);
-        transform: skew(0.12deg);
-    }
-    35% {
-        clip: rect(58px, 9999px, 42px, 0);
-        transform: skew(0.14deg);
+        transform: translate(-2px, -2px);
     }
     40% {
-        clip: rect(45px, 9999px, 22px, 0);
-        transform: skew(0.16deg);
-    }
-    45% {
-        clip: rect(42px, 9999px, 44px, 0);
-        transform: skew(0.18deg);
-    }
-    50% {
-        clip: rect(85px, 9999px, 18px, 0);
-        transform: skew(0.2deg);
-    }
-    55% {
-        clip: rect(42px, 9999px, 44px, 0);
-        transform: skew(0.22deg);
+        transform: translate(2px, 2px);
     }
     60% {
-        clip: rect(38px, 9999px, 42px, 0);
-        transform: skew(0.24deg);
-    }
-    65% {
-        clip: rect(58px, 9999px, 24px, 0);
-        transform: skew(0.26deg);
-    }
-    70% {
-        clip: rect(42px, 9999px, 44px, 0);
-        transform: skew(0.28deg);
-    }
-    75% {
-        clip: rect(45px, 9999px, 22px, 0);
-        transform: skew(0.3deg);
+        transform: translate(-2px, 2px);
     }
     80% {
-        clip: rect(58px, 9999px, 42px, 0);
-        transform: skew(0.32deg);
-    }
-    85% {
-        clip: rect(45px, 9999px, 22px, 0);
-        transform: skew(0.34deg);
-    }
-    90% {
-        clip: rect(42px, 9999px, 44px, 0);
-        transform: skew(0.36deg);
-    }
-    95% {
-        clip: rect(85px, 9999px, 18px, 0);
-        transform: skew(0.38deg);
+        transform: translate(2px, -2px);
     }
     100% {
-        clip: rect(42px, 9999px, 44px, 0);
-        transform: skew(0.4deg);
+        transform: translate(0);
     }
 }
 
-.glitch-on-hover:hover {
-    position: relative;
-    display: inline-block;
-    animation: glitch 0.5s infinite;
+.glitch-on-hover::before,
+.glitch-on-hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.glitch-on-hover:hover::before,
+.glitch-on-hover:hover::after {
+    opacity: 1;
+    animation: glitch 0.3s infinite;
+}
+
+.glitch-on-hover::before {
+    transform: translate(-2px, -2px);
+    background: linear-gradient(90deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
+}
+
+.glitch-on-hover::after {
+    transform: translate(2px, 2px);
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
 }
