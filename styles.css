@@ -8,9 +8,9 @@
     --button-color: #ffffff; /* White */
     --hover-color: #ff4081; /* Vibrant Pink */
     --green-color: #00BFA5; /* LinkedIn Green */
-    --soft-acid-green: #00FF88; /* Soft Acid Green */
     --soft-acid-pink: #FF70D4; /* Soft Acid Pink */
-    --soft-acid-blue: #70E4FF; /* Soft Acid Blue */
+    --soft-acid-yellow: #FFFF70; /* Soft Acid Yellow */
+    --soft-acid-mint: #70FFD4; /* Soft Acid Mint */
 }
 
 body {
@@ -175,20 +175,16 @@ nav ul li a:hover {
     transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover h3 {
-    color: var(--hover-color);
-    text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-blue);
-}
-
 .project p {
     font-size: 0.9em;
     line-height: 1.6;
     transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project:hover h3,
 .project:hover p {
     color: var(--hover-color);
-    text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-blue);
+    animation: glitch-snapshot 0.3s;
 }
 
 .contact-section {
@@ -230,20 +226,16 @@ nav ul li a:hover {
     transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gpt:hover h3 {
-    color: var(--hover-color);
-    text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-blue);
-}
-
 .gpt p {
     font-size: 0.9em;
     line-height: 1.6;
     transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.gpt:hover h3,
 .gpt:hover p {
     color: var(--hover-color);
-    text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-blue);
+    animation: glitch-snapshot 0.3s;
 }
 
 footer {
@@ -269,37 +261,14 @@ footer .container {
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
 }
 
-/* Classic Glitch Effect as Shadow */
-@keyframes glitch {
+/* Snapshot Glitch Effect */
+@keyframes glitch-snapshot {
     0% {
-        text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-blue);
-        box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-blue);
-    }
-    20% {
-        text-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-green), -2px -2px 0 var(--soft-acid-blue);
-        box-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-green), -2px -2px 0 var(--soft-acid-blue);
-    }
-    40% {
-        text-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-green), 2px 2px 0 var(--soft-acid-blue);
-        box-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-green), 2px 2px 0 var(--soft-acid-blue);
-    }
-    60% {
-        text-shadow: 2px 2px 0 var(--soft-acid-pink), -2px -2px 0 var(--soft-acid-green), -2px 2px 0 var(--soft-acid-blue);
-        box-shadow: 2px 2px 0 var(--soft-acid-pink), -2px -2px 0 var(--soft-acid-green), -2px 2px 0 var(--soft-acid-blue);
-    }
-    80% {
-        text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-blue);
-        box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-blue);
+        text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+        box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
     }
     100% {
-        text-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-green), -2px -2px 0 var(--soft-acid-blue);
-        box-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-green), -2px -2px 0 var(--soft-acid-blue);
+        text-shadow: none;
+        box-shadow: none;
     }
-}
-
-.project:hover h3,
-.project:hover p,
-.gpt:hover h3,
-.gpt:hover p {
-    animation: glitch 1s infinite;
 }
