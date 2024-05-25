@@ -161,7 +161,8 @@ nav ul li a:hover {
 
 .project:hover {
     transform: none; /* Ensure no transform on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Reset shadow */
+    box-shadow: none; /* Reset shadow */
+    animation: glitch 0.5s steps(1) forwards, hoverEffect 0.3s forwards 0.5s;
 }
 
 .project img {
@@ -185,10 +186,7 @@ nav ul li a:hover {
 .project:hover p {
     color: var(--hover-color);
     text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
-}
-
-.project:hover {
-    box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+    animation: glitch 0.5s steps(1) forwards, hoverEffect 0.3s forwards 0.5s;
 }
 
 .contact-section {
@@ -216,7 +214,8 @@ nav ul li a:hover {
 
 .gpt:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 191, 165, 0.5); /* Petite green shadow */
+    box-shadow: none; /* Reset shadow */
+    animation: glitch 0.5s steps(1) forwards, hoverEffect 0.3s forwards 0.5s;
 }
 
 .gpt img {
@@ -240,10 +239,7 @@ nav ul li a:hover {
 .gpt:hover p {
     color: var(--hover-color);
     text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
-}
-
-.gpt:hover {
-    box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+    animation: glitch 0.5s steps(1) forwards, hoverEffect 0.3s forwards 0.5s;
 }
 
 footer {
@@ -285,9 +281,15 @@ footer .container {
     }
 }
 
-.project:hover h3,
-.project:hover p,
-.gpt:hover h3,
-.gpt:hover p {
-    animation: glitch 0.5s steps(1) forwards;
+/* Additional Hover Effect */
+@keyframes hoverEffect {
+    from {
+        color: var(--hover-color);
+        text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+    }
+    to {
+        color: var(--primary-color);
+        text-shadow: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 }
