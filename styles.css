@@ -114,7 +114,7 @@ nav ul li a:hover {
 .social-proof {
     margin: 1em 0;
     font-weight: bold;
-    color: var (--green-color);
+    color: var(--green-color);
 }
 
 .btn {
@@ -184,7 +184,6 @@ nav ul li a:hover {
 .project:hover h3,
 .project:hover p {
     color: var(--hover-color);
-    animation: glitch 0.5s infinite alternate;
     text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
 }
 
@@ -240,7 +239,6 @@ nav ul li a:hover {
 .gpt:hover h3,
 .gpt:hover p {
     color: var(--hover-color);
-    animation: glitch 0.5s infinite alternate;
     text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
 }
 
@@ -271,7 +269,7 @@ footer .container {
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
 }
 
-/* Glitch Effect as Shadow */
+/* Snapshot Glitch Effect */
 @keyframes glitch {
     0% {
         text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
@@ -285,4 +283,11 @@ footer .container {
         text-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
         box-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
     }
+}
+
+.project:hover h3,
+.project:hover p,
+.gpt:hover h3,
+.gpt:hover p {
+    animation: glitch 0.5s steps(1) forwards;
 }
