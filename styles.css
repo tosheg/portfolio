@@ -161,8 +161,8 @@ nav ul li a:hover {
 
 .project:hover {
     transform: none; /* Ensure no transform on hover */
-    box-shadow: none; /* Reset shadow */
-    animation: glitch 0.5s steps(1) forwards, neonGlow 0.5s forwards 1s;
+    box-shadow: 0 0 20px var(--soft-acid-pink), 0 0 20px var(--soft-acid-mint), 0 0 20px var(--soft-acid-yellow);
+    animation: glitch 0.5s steps(1) forwards, neonGlow 1.5s infinite alternate;
 }
 
 .project img {
@@ -186,7 +186,7 @@ nav ul li a:hover {
 .project:hover p {
     color: var(--hover-color);
     text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
-    animation: glitch 0.5s steps(1) forwards, neonGlow 0.5s forwards 1s;
+    animation: glitch 0.5s steps(1) forwards, neonGlow 1.5s infinite alternate;
 }
 
 .contact-section {
@@ -214,8 +214,8 @@ nav ul li a:hover {
 
 .gpt:hover {
     transform: translateY(-3px);
-    box-shadow: none; /* Reset shadow */
-    animation: glitch 0.5s steps(1) forwards, neonGlow 0.5s forwards 1s;
+    box-shadow: 0 0 20px var(--soft-acid-pink), 0 0 20px var(--soft-acid-mint), 0 0 20px var(--soft-acid-yellow);
+    animation: glitch 0.5s steps(1) forwards, neonGlow 1.5s infinite alternate;
 }
 
 .gpt img {
@@ -239,7 +239,7 @@ nav ul li a:hover {
 .gpt:hover p {
     color: var(--hover-color);
     text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
-    animation: glitch 0.5s steps(1) forwards, neonGlow 0.5s forwards 1s;
+    animation: glitch 0.5s steps(1) forwards, neonGlow 1.5s infinite alternate;
 }
 
 footer {
@@ -259,21 +259,26 @@ footer .container {
 @keyframes glitch {
     0% {
         text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+        box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
     }
     50% {
         text-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-mint), -2px -2px 0 var(--soft-acid-yellow);
+        box-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-mint), -2px -2px 0 var(--soft-acid-yellow);
     }
     100% {
         text-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
+        box-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
     }
 }
 
 /* Neon Glow Effect */
 @keyframes neonGlow {
     from {
-        text-shadow: 0 0 10px var(--soft-acid-pink), 0 0 20px var(--soft-acid-pink), 0 0 30px var(--soft-acid-mint), 0 0 40px var(--soft-acid-yellow);
+        text-shadow: 0 0 10px var(--soft-acid-pink), 0 0 15px var(--soft-acid-mint), 0 0 20px var(--soft-acid-yellow);
+        box-shadow: 0 0 10px var(--soft-acid-pink), 0 0 15px var(--soft-acid-mint), 0 0 20px var(--soft-acid-yellow);
     }
     to {
-        text-shadow: 0 0 20px var(--soft-acid-pink), 0 0 30px var(--soft-acid-mint), 0 0 40px var(--soft-acid-yellow), 0 0 50px var(--soft-acid-pink);
+        text-shadow: 0 0 20px var(--soft-acid-pink), 0 0 25px var(--soft-acid-mint), 0 0 30px var(--soft-acid-yellow);
+        box-shadow: 0 0 20px var(--soft-acid-pink), 0 0 25px var(--soft-acid-mint), 0 0 30px var(--soft-acid-yellow);
     }
 }
