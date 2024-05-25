@@ -173,13 +173,13 @@ nav ul li a:hover {
 .project h3 {
     color: var(--button-background);
     margin-top: 0.5em;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .project p {
     font-size: 0.9em;
     line-height: 1.6;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .project:hover h3,
@@ -226,13 +226,13 @@ nav ul li a:hover {
 .gpt h3 {
     color: var(--button-background);
     margin-top: 0.5em;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .gpt p {
     font-size: 0.9em;
     line-height: 1.6;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .gpt:hover h3,
@@ -255,29 +255,16 @@ footer .container {
     padding: 0 1em;
 }
 
-/* Improved Frame Style */
-.section h2 {
-    display: inline-block;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--hover-color) 100%);
-    color: var(--button-color);
-    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
-}
-
 /* Snapshot Glitch Effect */
 @keyframes glitch {
     0% {
         text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
-        box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
     }
     50% {
         text-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-mint), -2px -2px 0 var(--soft-acid-yellow);
-        box-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-mint), -2px -2px 0 var(--soft-acid-yellow);
     }
     100% {
         text-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
-        box-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
     }
 }
 
@@ -285,10 +272,8 @@ footer .container {
 @keyframes neonGlow {
     from {
         text-shadow: 0 0 10px var(--soft-acid-pink), 0 0 20px var(--soft-acid-pink), 0 0 30px var(--soft-acid-mint), 0 0 40px var(--soft-acid-yellow);
-        box-shadow: 0 0 10px var(--soft-acid-pink), 0 0 20px var(--soft-acid-pink), 0 0 30px var(--soft-acid-mint), 0 0 40px var(--soft-acid-yellow);
     }
     to {
         text-shadow: 0 0 20px var(--soft-acid-pink), 0 0 30px var(--soft-acid-mint), 0 0 40px var(--soft-acid-yellow), 0 0 50px var(--soft-acid-pink);
-        box-shadow: 0 0 20px var(--soft-acid-pink), 0 0 30px var(--soft-acid-mint), 0 0 40px var(--soft-acid-yellow), 0 0 50px var(--soft-acid-pink);
     }
 }
