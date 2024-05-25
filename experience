@@ -1,0 +1,27 @@
+<section id="experience" class="section experience-section">
+    <div class="container">
+        <h2>Experience</h2>
+        <div class="experience-grid">
+            <div class="experience-item">
+                <h3>Senior Product Manager | Kalitero</h3>
+                <p><strong>2022 — Present</strong></p>
+                <ul>
+                    <li>Spearheaded the development of Coman, enhancing operational synergy and boosting user activation by 30%.</li>
+                    <li>Achieved 25% user growth in HR and accounting departments.</li>
+                    <li>Launched Repab, initiating 20 pilot projects within its first quarter.</li>
+                    <li>Integrated AI to automate content creation, reducing costs and enhancing efficiency.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Senior Product Manager | DRIM</h3>
+                <p><strong>2021 — 2022</strong></p>
+                <ul>
+                    <li>Launched PFM Link, securing a 40% adoption rate and attracting over 100K users.</li>
+                    <li>Automated internal back-office systems, reducing data entry errors to near zero.</li>
+                    <li>Launched a self-service platform for SMEs, increasing revenue by 10%.</li>
+                </ul>
+            </div>
+            <!-- Add more experience items similarly -->
+        </div>
+    </div>
+</section>
