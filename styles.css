@@ -269,22 +269,37 @@ footer .container {
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
 }
 
-/* Glitch Effect */
-@keyframes glitch {
+/* Smooth Acid Glitch Effect */
+@keyframes smooth-glitch {
     0% {
         transform: translate(0);
     }
+    10% {
+        transform: translate(-5px, -5px);
+    }
     20% {
-        transform: translate(-2px, -2px);
+        transform: translate(5px, 5px);
+    }
+    30% {
+        transform: translate(-5px, 5px);
     }
     40% {
-        transform: translate(2px, 2px);
+        transform: translate(5px, -5px);
+    }
+    50% {
+        transform: translate(-2px, -2px);
     }
     60% {
+        transform: translate(2px, 2px);
+    }
+    70% {
         transform: translate(-2px, 2px);
     }
     80% {
         transform: translate(2px, -2px);
+    }
+    90% {
+        transform: translate(0);
     }
     100% {
         transform: translate(0);
@@ -302,22 +317,22 @@ footer .container {
     background: inherit;
     mix-blend-mode: multiply;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease; /* Make the transition smoother */
     pointer-events: none;
 }
 
 .glitch-on-hover:hover::before,
 .glitch-on-hover:hover::after {
     opacity: 1;
-    animation: glitch 0.3s infinite;
+    animation: smooth-glitch 1s infinite; /* Slower animation */
 }
 
 .glitch-on-hover::before {
-    transform: translate(-2px, -2px);
-    background: linear-gradient(90deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
+    transform: translate(-5px, -5px);
+    background: linear-gradient(90deg, rgba(255, 0, 255, 0.2), rgba(0, 255, 255, 0.2)); /* Brighter colors */
 }
 
 .glitch-on-hover::after {
-    transform: translate(2px, 2px);
-    background: linear-gradient(90deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+    transform: translate(5px, 5px);
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2)); /* Brighter colors */
 }
