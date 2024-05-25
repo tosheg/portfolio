@@ -102,13 +102,10 @@ nav ul li a:hover {
     border-radius: 50%; /* Making it circular */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease; /* Adding transition for hover effect */
-    position: relative; /* Needed for glitch effect */
-    overflow: hidden;
 }
 
 .hero-image:hover {
     transform: rotate(360deg); /* Adding a funny animation on hover */
-    animation: glitch 0.5s infinite; /* Adding glitch effect */
 }
 
 .social-proof {
@@ -128,14 +125,11 @@ nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* Needed for glitch effect */
-    overflow: hidden;
 }
 
 .btn:hover {
     background-color: var(--hover-color);
     box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5); /* Petite shadow */
-    animation: glitch 0.5s infinite; /* Adding glitch effect */
 }
 
 .section {
@@ -158,14 +152,11 @@ nav ul li a:hover {
     border-radius: 0.5em;
     padding: 1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Needed for glitch effect */
-    overflow: hidden;
 }
 
 .project:hover {
     transform: translateY(-3px);
     box-shadow: 0 2px 10px rgba(0, 191, 165, 0.5); /* Petite green shadow */
-    animation: glitch 0.5s infinite; /* Adding glitch effect */
 }
 
 .project img {
@@ -203,14 +194,11 @@ nav ul li a:hover {
     border-radius: 0.5em;
     padding: 1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Needed for glitch effect */
-    overflow: hidden;
 }
 
 .gpt:hover {
     transform: translateY(-3px);
     box-shadow: 0 2px 10px rgba(0, 191, 165, 0.5); /* Petite green shadow */
-    animation: glitch 0.5s infinite; /* Adding glitch effect */
 }
 
 .gpt img {
@@ -249,103 +237,4 @@ footer .container {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--hover-color) 100%);
     color: var(--button-color);
     box-shadow: 0 4px 15px rgba(255, 64, 129, 0.2); /* Soft shadow */
-}
-
-/* Glitch Effect */
-@keyframes glitch {
-    0% {
-        clip: rect(56px, 9999px, 44px, 0);
-        transform: skew(0.08deg);
-    }
-    5% {
-        clip: rect(86px, 9999px, 90px, 0);
-        transform: skew(0.1deg);
-    }
-    10% {
-        clip: rect(26px, 9999px, 86px, 0);
-        transform: skew(0.2deg);
-    }
-    15% {
-        clip: rect(58px, 9999px, 80px, 0);
-        transform: skew(0.05deg);
-    }
-    20% {
-        clip: rect(60px, 9999px, 76px, 0);
-        transform: skew(0.08deg);
-    }
-    25% {
-        clip: rect(64px, 9999px, 60px, 0);
-        transform: skew(0.12deg);
-    }
-    30% {
-        clip: rect(66px, 9999px, 80px, 0);
-        transform: skew(0.15deg);
-    }
-    35% {
-        clip: rect(44px, 9999px, 88px, 0);
-        transform: skew(0.1deg);
-    }
-    40% {
-        clip: rect(78px, 9999px, 100px, 0);
-        transform: skew(0.05deg);
-    }
-    45% {
-        clip: rect(72px, 9999px, 64px, 0);
-        transform: skew(0.08deg);
-    }
-    50% {
-        clip: rect(76px, 9999px, 90px, 0);
-        transform: skew(0.12deg);
-    }
-    55% {
-        clip: rect(80px, 9999px, 84px, 0);
-        transform: skew(0.1deg);
-    }
-    60% {
-        clip: rect(86px, 9999px, 60px, 0);
-        transform: skew(0.05deg);
-    }
-    65% {
-        clip: rect(60px, 9999px, 72px, 0);
-        transform: skew(0.1deg);
-    }
-    70% {
-        clip: rect(66px, 9999px, 80px, 0);
-        transform: skew(0.12deg);
-    }
-    75% {
-        clip: rect(64px, 9999px, 90px, 0);
-        transform: skew(0.08deg);
-    }
-    80% {
-        clip: rect(72px, 9999px, 70px, 0);
-        transform: skew(0.05deg);
-    }
-    85% {
-        clip: rect(80px, 9999px, 78px, 0);
-        transform: skew(0.1deg);
-    }
-    90% {
-        clip: rect(74px, 9999px, 88px, 0);
-        transform: skew(0.12deg);
-    }
-    95% {
-        clip: rect(78px, 9999px, 70px, 0);
-        transform: skew(0.1deg);
-    }
-    100% {
-        clip: rect(80px, 9999px, 60px, 0);
-        transform: skew(0.08deg);
-    }
-}
-
-.hero-image:hover {
-    transform: rotate(360deg); /* Existing hover effect */
-    animation: glitch 0.5s infinite; /* Adding glitch effect */
-}
-
-.btn:hover,
-.project:hover,
-.gpt:hover {
-    animation: glitch 0.5s infinite; /* Adding glitch effect to other elements */
 }
