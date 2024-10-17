@@ -1,16 +1,16 @@
 :root {
-    --primary-color: #5A20CB; /* Deep Purple */
-    --secondary-color: #ff4081; /* Vibrant Pink */
-    --background-color: #ffffff; /* White */
-    --text-color: #333333; /* Dark Gray */
-    --accent-color: #f5f5f5; /* Light Gray */
-    --button-background: #5A20CB; /* Deep Purple */
-    --button-color: #ffffff; /* White */
-    --hover-color: #ff4081; /* Vibrant Pink */
-    --green-color: #00BFA5; /* LinkedIn Green */
-    --soft-acid-pink: #FF70D4; /* Soft Acid Pink */
-    --soft-acid-yellow: #FFFF70; /* Soft Acid Yellow */
-    --soft-acid-mint: #70FFD4; /* Soft Acid Mint */
+    --primary-color: #3E2C41; /* Deep Aubergine */
+    --secondary-color: #FF5E57; /* Coral Red */
+    --background-color: #FAF9F6; /* Soft Ivory White */
+    --text-color: #1C1C1C; /* Charcoal Black */
+    --accent-color: #D8D0C5; /* Warm Taupe */
+    --button-background: #3E2C41; /* Deep Aubergine */
+    --button-color: #FAF9F6; /* Soft Ivory White */
+    --hover-color: #FF8567; /* Muted Coral Orange */
+    --highlight-color: #B29E8D; /* Muted Champagne Gold */
+    --soft-acid-green: #A6B198; /* Soft Sage */
+    --soft-acid-rose: #D2A4A6; /* Dusty Rose */
+    --soft-acid-platinum: #EAE3DD; /* Soft Platinum */
 }
 
 body {
@@ -60,7 +60,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--hover-color);
-    text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+    text-shadow: -2px -2px 0 var(--soft-acid-rose), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-platinum);
 }
 
 .hero-section {
@@ -114,7 +114,7 @@ nav ul li a:hover {
 .social-proof {
     margin: 1em 0;
     font-weight: bold;
-    color: var(--green-color);
+    color: var(--highlight-color);
 }
 
 .btn {
@@ -132,7 +132,7 @@ nav ul li a:hover {
 
 .btn:hover {
     background-color: var(--hover-color);
-    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.5); /* Petite shadow */
+    box-shadow: 0 4px 10px rgba(255, 133, 103, 0.5); /* Petite shadow */
 }
 
 .section {
@@ -161,7 +161,7 @@ nav ul li a:hover {
 
 .project:hover {
     transform: none; /* Ensure no transform on hover */
-    box-shadow: 0 0 20px var(--soft-acid-pink), 0 0 20px var(--soft-acid-mint), 0 0 20px var(--soft-acid-yellow);
+    box-shadow: 0 0 20px var(--soft-acid-rose), 0 0 20px var(--soft-acid-green), 0 0 20px var(--soft-acid-platinum);
     animation: glitch 0.5s steps(1) forwards, neonGlow 1.5s infinite alternate;
 }
 
@@ -185,7 +185,7 @@ nav ul li a:hover {
 .project:hover h3,
 .project:hover p {
     color: var(--hover-color);
-    text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+    text-shadow: -2px -2px 0 var(--soft-acid-rose), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-platinum);
     animation: glitch 0.5s steps(1) forwards, neonGlow 1.5s infinite alternate;
 }
 
@@ -214,7 +214,7 @@ nav ul li a:hover {
 
 .gpt:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 20px var(--soft-acid-pink), 0 0 20px var(--soft-acid-mint), 0 0 20px var(--soft-acid-yellow);
+    box-shadow: 0 0 20px var(--soft-acid-rose), 0 0 20px var(--soft-acid-green), 0 0 20px var(--soft-acid-platinum);
     animation: glitch 0.5s steps(1) forwards, neonGlow 1.5s infinite alternate;
 }
 
@@ -238,7 +238,7 @@ nav ul li a:hover {
 .gpt:hover h3,
 .gpt:hover p {
     color: var(--hover-color);
-    text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+    text-shadow: -2px -2px 0 var(--soft-acid-rose), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-platinum);
     animation: glitch 0.5s steps(1) forwards, neonGlow 1.5s infinite alternate;
 }
 
@@ -258,27 +258,27 @@ footer .container {
 /* Snapshot Glitch Effect */
 @keyframes glitch {
     0% {
-        text-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
-        box-shadow: -2px -2px 0 var(--soft-acid-pink), 2px 2px 0 var(--soft-acid-mint), 2px -2px 0 var(--soft-acid-yellow);
+        text-shadow: -2px -2px 0 var(--soft-acid-rose), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-platinum);
+        box-shadow: -2px -2px 0 var(--soft-acid-rose), 2px 2px 0 var(--soft-acid-green), 2px -2px 0 var(--soft-acid-platinum);
     }
     50% {
-        text-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-mint), -2px -2px 0 var(--soft-acid-yellow);
-        box-shadow: 2px -2px 0 var(--soft-acid-pink), -2px 2px 0 var(--soft-acid-mint), -2px -2px 0 var(--soft-acid-yellow);
+        text-shadow: 2px -2px 0 var(--soft-acid-rose), -2px 2px 0 var(--soft-acid-green), -2px -2px 0 var(--soft-acid-platinum);
+        box-shadow: 2px -2px 0 var(--soft-acid-rose), -2px 2px 0 var(--soft-acid-green), -2px -2px 0 var(--soft-acid-platinum);
     }
     100% {
-        text-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
-        box-shadow: -2px 2px 0 var(--soft-acid-pink), 2px -2px 0 var(--soft-acid-mint), 2px 2px 0 var(--soft-acid-yellow);
+        text-shadow: -2px 2px 0 var(--soft-acid-rose), 2px -2px 0 var(--soft-acid-green), 2px 2px 0 var(--soft-acid-platinum);
+        box-shadow: -2px 2px 0 var(--soft-acid-rose), 2px -2px 0 var(--soft-acid-green), 2px 2px 0 var(--soft-acid-platinum);
     }
 }
 
 /* Neon Glow Effect */
 @keyframes neonGlow {
     from {
-        text-shadow: 0 0 10px var(--soft-acid-pink), 0 0 15px var(--soft-acid-mint), 0 0 20px var(--soft-acid-yellow);
-        box-shadow: 0 0 10px var(--soft-acid-pink), 0 0 15px var(--soft-acid-mint), 0 0 20px var(--soft-acid-yellow);
+        text-shadow: 0 0 10px var(--soft-acid-rose), 0 0 15px var(--soft-acid-green), 0 0 20px var(--soft-acid-platinum);
+        box-shadow: 0 0 10px var(--soft-acid-rose), 0 0 15px var(--soft-acid-green), 0 0 20px var(--soft-acid-platinum);
     }
     to {
-        text-shadow: 0 0 20px var(--soft-acid-pink), 0 0 25px var(--soft-acid-mint), 0 0 30px var(--soft-acid-yellow);
-        box-shadow: 0 0 20px var(--soft-acid-pink), 0 0 25px var(--soft-acid-mint), 0 0 30px var(--soft-acid-yellow);
+        text-shadow: 0 0 20px var(--soft-acid-rose), 0 0 25px var(--soft-acid-green), 0 0 30px var(--soft-acid-platinum);
+        box-shadow: 0 0 20px var(--soft-acid-rose), 0 0 25px var(--soft-acid-green), 0 0 30px var(--soft-acid-platinum);
     }
 }
